@@ -1,0 +1,1 @@
+.list-slider{display:grid;gap:20px;grid-template-columns:50% 50%}.list-slider swiper-container{--swiper-navigation-size:27px;--swiper-navigation-top-offset:50%;--swiper-navigation-sides-offset:2rem;--swiper-navigation-color:#fff}.list-slider .list-slider-liste{grid-column:1/span 1}.list-slider .list-slider-wrapper{grid-column:2/span 1}

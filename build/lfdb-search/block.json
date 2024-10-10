@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lfdb/search-block",
+  "version": "0.1.0",
+  "title": "Recherche lfdb",
+  "category": "lfdb-blocks",
+  "description": "Bloc recherche de la Fabrique de blogs",
+  "parent": [
+    "core/navigation"
+  ],
+  "example": {},
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "attributes": {
+    "borderRadius": {
+      "type": "string",
+      "default": "0px"
+    },
+    "searchPadding": {
+      "type": "string",
+      "default": "0px"
+    },
+    "borderSize": {
+      "type": "string",
+      "default": "1px"
+    },
+    "iconeSize": {
+      "type": "string",
+      "default": "20px"
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "timeInterval": {
+      "type": "number",
+      "default": 4000
+    },
+    "couleurFond": {
+      "type": "string",
+      "default": "transparent"
+    },
+    "couleurTexte": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "searchPlaceholderText": {
+      "type": "string",
+      "default": "Rechercher..."
+    }
+  },
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

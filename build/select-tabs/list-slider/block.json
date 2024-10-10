@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "lfdb/list-slide",
+  "version": "1.0.0",
+  "title": "List Slide",
+  "category": "text",
+  "description": "Slider piloté par une list",
+  "supports": {
+    "html": true,
+    "align": true,
+    "alignWide": true,
+    "ariaLabel": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string"
+    },
+    "numberOfSlides": {
+      "type": "string"
+    },
+    "listContent": {
+      "type": "array",
+      "default": [
+        {
+          "titreList": "popo",
+          "slide": {
+            "titreText": "Titre lipsum...",
+            "contentText": "Lorem ipsum dolor sit amet..."
+          }
+        }
+      ]
+    }
+  },
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

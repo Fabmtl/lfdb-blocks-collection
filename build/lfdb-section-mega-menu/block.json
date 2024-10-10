@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lfdb/section-mega-menu",
+  "version": "0.1.0",
+  "title": "Section mega menu",
+  "category": "lfdb-blocks",
+  "description": "Section mega menu LFDB",
+  "example": {},
+  "supports": {
+    "html": false,
+    "layout": true,
+    "alignWide": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "ariaLabel": true,
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": true
+    },
+    "color": {
+      "text": false,
+      "background": true
+    }
+  },
+  "attributes": {
+    "style": {
+      "type": "object",
+      "default": {
+        "color": {
+          "background": "#f6f6f6"
+        }
+      }
+    },
+    "blockNameId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "viewStyle": "file:./view.css"
+}

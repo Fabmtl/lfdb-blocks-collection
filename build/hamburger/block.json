@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lfdb/lfdb-hamburger",
+  "version": "0.1.0",
+  "title": "Hamburger",
+  "category": "lfdb-blocks",
+  "parent": [
+    "core/navigation"
+  ],
+  "description": "Icône de menu (hamburger)",
+  "supports": {
+    "html": false,
+    "align": false,
+    "anchor": true
+  },
+  "attributes": {
+    "paddindX": {
+      "type": "string",
+      "default": "0px"
+    },
+    "paddindY": {
+      "type": "string",
+      "default": "0px"
+    },
+    "layerWidth": {
+      "type": "string",
+      "default": "20px"
+    },
+    "layerHeight": {
+      "type": "string",
+      "default": "2px"
+    },
+    "layerSpacing": {
+      "type": "string",
+      "default": "3px"
+    },
+    "opacity": {
+      "type": "number"
+    },
+    "borderSize": {
+      "type": "number",
+      "default": "1px"
+    },
+    "hasBorderRadius": {
+      "type": "boolean",
+      "default": true
+    },
+    "borderRadiusSize": {
+      "type": "string",
+      "default": "1px"
+    },
+    "burgerMenuColor": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "fondCouleur": {
+      "type": "string",
+      "default": "transparent"
+    },
+    "blockNameIdTarget": {
+      "type": "string"
+    }
+  },
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css"
+}

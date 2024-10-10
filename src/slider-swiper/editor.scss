@@ -1,0 +1,51 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-lfdb-slider-swiper {
+	swiper-container {
+		display: flex;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scroll-snap-points-x: repeat(100vw);
+		scroll-snap-type: mandatory;
+	}
+}
+
+
+button.add-slide-button {
+	padding: 1rem 2rem;
+	background: #000;
+	border: none;
+	border-radius: 3px;
+	color: #f7f7f7;
+	font-size: .875rem;
+	float: right;
+	cursor: pointer;
+}
+
+.screens-list {
+	display: flex;
+	align-items: center;
+	gap: 0 1rem;
+	margin:0;
+	padding:0;
+	li {
+		list-style-type:none;
+		margin:0;
+		padding: 5px 0;
+		 a {
+			display: block;
+			width:20px;
+			height:20px;
+			padding: 0;
+			// background-color: #000;
+			// border-radius: 3px;
+			cursor:pointer;
+			// color: #000;
+			text-decoration: none;
+		 }
+	}
+}

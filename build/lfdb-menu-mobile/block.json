@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lfdb/menu-mobile",
+  "version": "0.1.0",
+  "title": "Zone menu mobile",
+  "category": "lfdb-blocks",
+  "description": "Menu mobile LFDB",
+  "example": {},
+  "supports": {
+    "html": false,
+    "layout": true,
+    "multiple": false,
+    "alignWide": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "ariaLabel": true,
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": true
+    },
+    "color": {
+      "text": false,
+      "background": true
+    }
+  },
+  "attributes": {
+    "style": {
+      "type": "object",
+      "default": {
+        "color": {
+          "background": "#f6f6f6"
+        }
+      }
+    },
+    "blockNameId": {
+      "type": "string"
+    }
+  },
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

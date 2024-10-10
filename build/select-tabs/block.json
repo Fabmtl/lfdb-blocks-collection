@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lfdb/select-tabs",
+  "version": "0.1.0",
+  "title": "Select Tabs",
+  "category": "text",
+  "icon": "smiley",
+  "description": "Ce block est utilisé pour afficher les trous du parcours",
+  "supports": {},
+  "attributes": {},
+  "textdomain": "lfdb",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .list-slider {
+    swiper-container {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        // scroll-snap-points-x: repeat(100vw);
+        scroll-snap-type: mandatory;
+    }
+	swiper-slide {
+		flex-shrink: 0;
+		width: 100%;
+	}
+ }
+
+
+button.add-slide-button {
+	padding: 1rem 2rem;
+	background: #000;
+	border: none;
+	border-radius: 3px;
+	color: #f7f7f7;
+	font-size: .875rem;
+	float: right;
+	cursor: pointer;
+}

@@ -1,0 +1,59 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-lfdb-search-block {
+	form#slide-search {
+		display: flex;
+		border: var(--lfdb-serch-border-size) solid var(--lfdb-icon-color);
+		border-radius: var(--lfdb-search-borduer-radius);
+		padding: var(--lfdb-search-padding);
+		background-color: var(--lfdb-search-block-couleur-fond);
+	}
+
+	form#slide-search input[type="text"] {
+		display: block;
+		padding: 0;
+		margin: 0;
+		flex: 1 auto;
+		background-color: transparent;
+		border: none;
+		max-width: 0px;
+		width: 100vw;
+		transition: max-width 300ms ease-out;
+		color:var(--lfdb-search-block-couleur-texte);
+		&::placeholder {
+			color: var(--lfdb-search-block-couleur-texte);
+			opacity: 1; /* Firefox */
+		}
+
+		&::-ms-input-placeholder {
+			/* Edge 12 -18 */
+			color: var(--lfdb-search-block-couleur-texte);
+		}
+	}
+	form#slide-search input[type="text"]:focus {
+		outline: var(--lfdb-icon-color) dotted 1px;
+	}
+
+	button.slide-search-button {
+		aspect-ratio: 1 / 1;
+		padding: 0;
+		margin: 0;
+		width: var(--lfdb-search-icone-size);
+		height: var(--lfdb-search-icone-size);
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		// border-radius: 100px;
+	}
+
+	button.slide-search-button .icon {
+		width: var(--lfdb-search-icone-size);
+		height: var(--lfdb-search-icone-size);
+		fill: var(--lfdb-icon-color);
+	}
+}

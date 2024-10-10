@@ -1,0 +1,1 @@
+.list-slider swiper-container{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:mandatory}.list-slider swiper-slide{flex-shrink:0;width:100%}button.add-slide-button{background:#000;border:none;border-radius:3px;color:#f7f7f7;cursor:pointer;float:left;font-size:.875rem;padding:1rem 2rem}

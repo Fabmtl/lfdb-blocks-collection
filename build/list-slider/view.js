@@ -1,0 +1,1 @@
+(()=>{var e;document,e=()=>{},"loading"!=document.readyState||document.addEventListener("DOMContentLoaded",e)})();

@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+#lfdb-section-menu-mobile {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 300ms cubic-bezier(0,.28,.34,.98);
+	&.is-active {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: all;
+	}
+}

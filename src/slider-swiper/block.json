@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lfdb/slider-swiper",
+	"version": "0.1.0",
+	"title": "Slider Full Screen",
+	"category": "lfdb-blocks",
+	"description": "Slider plein écran, utilise le bloc 'lfdb/slide'",
+	"supports": {
+		"html": true,
+		"align":["full","wide"],
+		"alignWide": true,
+		"ariaLabel": true,
+		"multiple":false
+	},
+	"attributes": {
+		"align":{
+			"type":"string",
+			"default":"full"
+		},
+		"columnView":{
+			"type":"boolean",
+			"default":false
+		},
+		"hasNavigation":{
+			"type":"boolean",
+			"default":true
+		},
+		"isAutoplay":{
+			"type":"boolean",
+			"default":false
+		},
+		"autoPlayDuration":{
+			"type":"string",
+			"default":"4000"
+		}
+	},
+	"textdomain": "lfdb",
+	"viewScript": "file:./view.js",
+	"editorScript": ["file:./index.js","https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"],
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

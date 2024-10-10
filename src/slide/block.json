@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lfdb/slide-swiper",
+	"version": "1.0.0",
+	"title": "Slide swiper",
+	"category": "lfdb-blocks",
+	"description": "Slide utilise le bloc 'core/cover'",
+	"parent":["lfdb/slider-swiper"],
+	
+	"supports": {
+		"html": true,
+		"align":true,
+		"alignWide": true,
+		"ariaLabel": true,
+		"inserter":false
+	},
+	"attributes": {
+		"align":{
+			"type":"string",
+			"default":"full"
+		},
+		"className":{
+			"type":"string"
+		}
+	},
+	"textdomain": "lfdb",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

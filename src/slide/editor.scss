@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ swiper-slide.wp-block-lfdb-slide-swiper {
+    flex-shrink: 0;
+    width:100vw;
+    height: 700px;
+    &.is-style-selected-slide {
+        border: 4px red solid !important;
+    }
+ }
+ 

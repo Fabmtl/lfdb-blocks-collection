@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lfdb/list-slider",
+	"version": "0.1.0",
+	"title": "Slider avec liste",
+	"category": "text",
+	"icon": "slides",
+	"description": "Changement de slide à l'aide des éléments d'une liste.",
+	"supports": {
+		"html": true,
+		"align":true,
+		"alignWide": true,
+		"ariaLabel": true,
+		"multiple":false
+	},
+	"attributes": {
+		"align":{
+			"type":"string"
+		},
+		"hasNavigation":{
+			"type":"boolean",
+			"default":true
+		},
+		"isAutoplay":{
+			"type":"boolean",
+			"default":false
+		},
+		"autoPlayDuration":{
+			"type":"string",
+			"default":"4000"
+		}
+	},
+	"textdomain": "lfdb",
+	"viewScript": "file:./view.js",
+	"editorScript": ["file:./index.js","swiper-blocks-scripts"],
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

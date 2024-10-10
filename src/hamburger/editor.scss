@@ -1,0 +1,12 @@
+@import 'hamburgers/burgers';
+
+.wp-block-lfdb-lfdb-hamburger {
+    border: var(--icone-burger-border-size) solid var(--icone-burger-color);
+    background-color: var(--icone-couleur-de-fond);
+}
+
+.edit-icone-border-size {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
