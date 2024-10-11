@@ -90,29 +90,19 @@ export default function Edit(props) {
 							onChange: onChangeIconColor,
 							label: __("Couleur de l'icône"),
 						},
-					]}
-				/>
-				<PanelColorSettings
-					title={__("Couleur de fond")}
-					colorSettings={[
 						{
 							value: couleurFond,
 							onChange: onChangeCouleurFond,
 							label: __("Couleur de fond"),
 						},
-					]}
-				/>
-				<PanelColorSettings
-					title={__("Couleur de texte")}
-					colorSettings={[
 						{
 							value: couleurTexte,
 							onChange: onChangeCouleurTexte,
 							label: __("Couleur de texte"),
-						},
+						}
 					]}
 				/>
-				<Panel header="My Panel">
+				<Panel>
 					<PanelBody title="Padding l'icône" initialOpen={true}>
 						<PanelRow>
 							<NumberControl
