@@ -1,4 +1,4 @@
-const { times } = lodash;
+// const { times } = lodash;
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, useInnerBlocksProps, InspectorControls } from '@wordpress/block-editor';
 import { Panel, PanelBody, PanelRow, ToggleControl, TextControl } from '@wordpress/components';

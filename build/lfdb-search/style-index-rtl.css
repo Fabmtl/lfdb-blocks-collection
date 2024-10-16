@@ -1,1 +1,65 @@
-.wp-block-lfdb-search-block form#slide-search{background-color:var(--lfdb-search-block-couleur-fond);border:var(--lfdb-serch-border-size) solid var(--lfdb-icon-color);border-radius:var(--lfdb-search-borduer-radius);display:flex;padding:var(--lfdb-search-padding)}.wp-block-lfdb-search-block form#slide-search input[type=text]{background-color:transparent;border:none;color:var(--lfdb-search-block-couleur-texte);display:block;flex:1 auto;margin:0;max-width:0;padding:0;transition:max-width .3s ease-out;width:100vw}.wp-block-lfdb-search-block form#slide-search input[type=text]::-moz-placeholder{color:var(--lfdb-search-block-couleur-texte);opacity:1}.wp-block-lfdb-search-block form#slide-search input[type=text]::placeholder{color:var(--lfdb-search-block-couleur-texte);opacity:1}.wp-block-lfdb-search-block form#slide-search input[type=text]::-ms-input-placeholder{color:var(--lfdb-search-block-couleur-texte)}.wp-block-lfdb-search-block form#slide-search input[type=text]:focus{outline:var(--lfdb-icon-color) dotted 1px}.wp-block-lfdb-search-block button.slide-search-button{aspect-ratio:1/1;background-color:transparent;border:none;cursor:pointer;height:var(--lfdb-search-icone-size);margin:0;padding:0;width:var(--lfdb-search-icone-size)}.wp-block-lfdb-search-block button.slide-search-button .icon{height:var(--lfdb-search-icone-size);width:var(--lfdb-search-icone-size);fill:var(--lfdb-icon-color)}
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/lfdb-search/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-lfdb-search-block {
+  position: relative;
+}
+.wp-block-lfdb-search-block form#slide-search {
+  display: flex;
+  border: var(--lfdb-serch-border-size) solid var(--lfdb-icon-color);
+  border-radius: var(--lfdb-search-borduer-radius);
+  padding: var(--lfdb-search-padding);
+  background-color: var(--lfdb-search-block-couleur-fond);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-50%);
+}
+.wp-block-lfdb-search-block form#slide-search input[type=text] {
+  display: block;
+  padding: 0;
+  margin: 0;
+  flex: 1 auto;
+  background-color: transparent;
+  border: none;
+  max-width: 0px;
+  width: 100vw;
+  transition: max-width 300ms ease-out;
+  color: var(--lfdb-search-block-couleur-texte);
+}
+.wp-block-lfdb-search-block form#slide-search input[type=text]::-moz-placeholder {
+  color: var(--lfdb-search-block-couleur-texte);
+  opacity: 1; /* Firefox */
+}
+.wp-block-lfdb-search-block form#slide-search input[type=text]::placeholder {
+  color: var(--lfdb-search-block-couleur-texte);
+  opacity: 1; /* Firefox */
+}
+.wp-block-lfdb-search-block form#slide-search input[type=text]::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: var(--lfdb-search-block-couleur-texte);
+}
+.wp-block-lfdb-search-block form#slide-search input[type=text]:focus {
+  outline: var(--lfdb-icon-color) dotted 1px;
+}
+.wp-block-lfdb-search-block button.slide-search-button {
+  aspect-ratio: 1/1;
+  padding: 0;
+  margin: 0;
+  width: var(--lfdb-search-icone-size);
+  height: var(--lfdb-search-icone-size);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.wp-block-lfdb-search-block button.slide-search-button .icon {
+  width: var(--lfdb-search-icone-size);
+  height: var(--lfdb-search-icone-size);
+  fill: var(--lfdb-icon-color);
+}

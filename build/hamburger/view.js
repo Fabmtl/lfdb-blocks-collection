@@ -1,1 +1,25 @@
-!function(){const e=document.querySelector(".wp-block-lfdb-lfdb-hamburger"),i=document.getElementById("lfdb-section-menu-mobile"),s=document.body;e.addEventListener("click",(function(){if(e.classList.contains("is-active"))return e.classList.remove("is-active"),i.classList.remove("is-active"),void s.classList.remove("menu-mobile-is-active");e.classList.add("is-active"),i.classList.add("is-active"),s.classList.add("menu-mobile-is-active")}))}();
+/******/ (() => { // webpackBootstrap
+/*!*******************************!*\
+  !*** ./src/hamburger/view.js ***!
+  \*******************************/
+(function () {
+  'use-strict';
+
+  const hamburgerOpen = document.querySelector(".wp-block-lfdb-lfdb-hamburger");
+  const blockNavigationMobile = document.getElementById("lfdb-section-menu-mobile");
+  const body = document.body;
+  hamburgerOpen.addEventListener("click", function () {
+    if (hamburgerOpen.classList.contains("is-active")) {
+      hamburgerOpen.classList.remove("is-active");
+      blockNavigationMobile.classList.remove("is-active");
+      body.classList.remove("menu-mobile-is-active");
+      return;
+    }
+    hamburgerOpen.classList.add("is-active");
+    blockNavigationMobile.classList.add("is-active");
+    body.classList.add("menu-mobile-is-active");
+  });
+})();
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

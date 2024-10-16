@@ -1,1 +1,47 @@
-.wp-block-lfdb-slider-swiper swiper-container{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-points-x:repeat(100vw);scroll-snap-type:mandatory}button.add-slide-button{background:#000;border:none;border-radius:3px;color:#f7f7f7;cursor:pointer;float:left;font-size:.875rem;padding:1rem 2rem}.screens-list{align-items:center;display:flex;gap:0 1rem;margin:0;padding:0}.screens-list li{list-style-type:none;margin:0;padding:5px 0}.screens-list li a{cursor:pointer;display:block;height:20px;padding:0;text-decoration:none;width:20px}
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/slider-swiper/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-lfdb-slider-swiper swiper-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(100vw);
+  scroll-snap-type: mandatory;
+}
+
+button.add-slide-button {
+  padding: 1rem 2rem;
+  background: #000;
+  border: none;
+  border-radius: 3px;
+  color: #f7f7f7;
+  font-size: 0.875rem;
+  float: left;
+  cursor: pointer;
+}
+
+.screens-list {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0;
+}
+.screens-list li {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0;
+}
+.screens-list li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}

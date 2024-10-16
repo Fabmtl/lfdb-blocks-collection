@@ -6,12 +6,17 @@
  */
 
 .wp-block-lfdb-search-block {
+	position: relative;
 	form#slide-search {
 		display: flex;
 		border: var(--lfdb-serch-border-size) solid var(--lfdb-icon-color);
 		border-radius: var(--lfdb-search-borduer-radius);
 		padding: var(--lfdb-search-padding);
 		background-color: var(--lfdb-search-block-couleur-fond);
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateY(-50%);
 	}
 
 	form#slide-search input[type="text"] {

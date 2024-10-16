@@ -7,39 +7,24 @@ import {
 	RichText,
 	useBlockProps,
 } from '@wordpress/block-editor';
-import { useEntityRecords } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
-import { createInterpolateElement } from '@wordpress/element';
+// import { useEntityRecords } from '@wordpress/core-data';
+// import { useSelect } from '@wordpress/data';
+// import { createInterpolateElement } from '@wordpress/element';
 import {
 	ComboboxControl,
 	PanelBody,
 	Notice,
 	TextControl,
 	TextareaControl,
-	ToggleControl,
+	// ToggleControl,
 	__experimentalHStack as HStack, // eslint-disable-line
 	__experimentalToggleGroupControl as ToggleGroupControl, // eslint-disable-line
 	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon, // eslint-disable-line
 } from '@wordpress/components';
 
 import stringToSlug from '../../common/string-to-slug';
-/**
- * Internal dependencies
- */
-import './edit.scss';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @param {Object}   props               Properties passed to the function.
- * @param {Object}   props.attributes    Available block attributes.
- * @param {Function} props.setAttributes Function that updates individual attributes.
- *
- * @return {Element} Element to render.
-*/
+import './edit.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
 	
@@ -56,8 +41,9 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const menuOptions = [];
 
-	console.log("hasMenus",hasMenus);
-	console.log("1",menuOptions);
+	console.log("sectionsMegaMenu",sectionsMegaMenu);
+	// console.log("hasMenus",hasMenus);
+	// console.log("1",menuOptions);
 	
 	if( hasMenus ) {
 		menuOptions.push( { value : 0, label : 'Choisir une section' } )
