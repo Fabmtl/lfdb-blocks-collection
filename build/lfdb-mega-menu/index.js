@@ -161,17 +161,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _common_string_to_slug__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../common/string-to-slug */ "./common/string-to-slug.js");
-/* harmony import */ var _edit_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./edit.scss */ "./src/lfdb-mega-menu/edit.scss");
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/core-data */ "@wordpress/core-data");
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _common_string_to_slug__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../common/string-to-slug */ "./common/string-to-slug.js");
+/* harmony import */ var _edit_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./edit.scss */ "./src/lfdb-mega-menu/edit.scss");
 
 /**
  * WordPress dependencies
  */
 
 
-// import { useEntityRecords } from '@wordpress/core-data';
+
 // import { useSelect } from '@wordpress/data';
 // import { createInterpolateElement } from '@wordpress/element';
 
@@ -185,24 +187,31 @@ function Edit({
     label,
     menuSlug,
     title,
-    description
+    description,
+    pageParentId
   } = attributes;
-  const sectionsMegaMenu = wp.data.select('core/block-editor').getBlocks();
-  const hasMenus = sectionsMegaMenu.filter(x => x.name === 'lfdb/section-mega-menu');
+  const sectionsMegaMenu = wp.data.select("core/block-editor").getBlocks();
+  const {
+    hasResolved,
+    records
+  } = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__.useEntityRecords)("postType", "page", {
+    per_page: 100
+  });
+  const hasMenus = sectionsMegaMenu.filter(x => x.name === "lfdb/section-mega-menu");
+  const listePages = [];
   const menuOptions = [];
-  console.log("sectionsMegaMenu", sectionsMegaMenu);
-  // console.log("hasMenus",hasMenus);
-  // console.log("1",menuOptions);
+
+  // console.log("sectionsMegaMenu",sectionsMegaMenu);
 
   if (hasMenus) {
     menuOptions.push({
       value: 0,
-      label: 'Choisir une section'
+      label: "Choisir une section"
     });
     hasMenus.forEach(b => {
       if (b) {
         menuOptions.push({
-          value: (0,_common_string_to_slug__WEBPACK_IMPORTED_MODULE_4__["default"])(b.attributes.blockNameId),
+          value: (0,_common_string_to_slug__WEBPACK_IMPORTED_MODULE_5__["default"])(b.attributes.blockNameId),
           label: b.attributes.blockNameId
         });
       }
@@ -210,66 +219,84 @@ function Edit({
   } else {
     menuOptions.push({
       value: 0,
-      label: 'Loading... '
+      label: "Loading... "
     });
   }
-
-  // console.log("2",menuOptions);
+  if (hasResolved) {
+    listePages.push({
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Liste des page"),
+      valiue: 0
+    });
+    records.map(page => {
+      listePages.push({
+        label: page.title.rendered,
+        value: page.id
+      });
+    });
+  }
+  console.log("listePages", listePages);
 
   // Notice for when no menus have been created.
-  const noMenusNotice = (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Notice, {
+  const noMenusNotice = (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Notice, {
     status: "warning",
     isDismissible: false
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Aucune section de mega menu n\'est associé à votre onglet', 'lfdb'));
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Aucune section de mega menu n'est associé à votre onglet", "lfdb"));
 
   // Modify block props.
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-    className: 'wp-block-navigation-item wp-block-lfdb-mega-menu__toggle'
+    className: "wp-block-navigation-item wp-block-lfdb-mega-menu__toggle"
   });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
     group: "settings"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
     className: "lfdb-mega-menu__settings-panel",
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Settings', 'mega-menu-block'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Settings", "lfdb"),
     initialOpen: true
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Label', 'mega-menu-block'),
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Label", "lfdb"),
     type: "text",
     value: label,
     onChange: value => setAttributes({
       label: value
     }),
     autoComplete: "off"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ComboboxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Menu Template', 'mega-menu-block'),
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ComboboxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Menu Template", "lfdb"),
     value: menuSlug,
     options: menuOptions,
     onChange: value => setAttributes({
       menuSlug: value
     })
-  }), !hasMenus && noMenusNotice, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
+  }), !hasMenus && noMenusNotice, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextareaControl, {
     className: "settings-panel__description",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description', 'mega-menu-block'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Description", "lfdb"),
     type: "text",
-    value: description || '',
+    value: description || "",
     onChange: descriptionValue => {
       setAttributes({
         description: descriptionValue
       });
     },
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('The description will be displayed in the menu if the current theme supports it.', 'mega-menu-block'),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("The description will be displayed in the menu if the current theme supports it.", "lfdb"),
     autoComplete: "off"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title', 'mega-menu-block'),
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Title", "lfdb"),
     type: "text",
-    value: title || '',
+    value: title || "",
     onChange: titleValue => {
       setAttributes({
         title: titleValue
       });
     },
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Additional information to help clarify the purpose of the link.', 'mega-menu-block'),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Additional information to help clarify the purpose of the link.", "lfdb"),
     autoComplete: "off"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ComboboxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Page parent", "lfdb"),
+    value: pageParentId,
+    options: listePages,
+    onChange: value => setAttributes({
+      pageParentId: value
+    })
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
@@ -281,9 +308,9 @@ function Edit({
     onChange: labelValue => setAttributes({
       label: labelValue
     }),
-    "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Mega menu link text', 'mega-menu-block'),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add label…', 'mega-menu-block'),
-    allowedFormats: ['core/bold', 'core/italic', 'core/image', 'core/strikethrough']
+    "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Mega menu link text", "lfdb"),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Add label…", "lfdb"),
+    allowedFormats: ["core/bold", "core/italic", "core/image", "core/strikethrough"]
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "wp-block-lfdb-mega-menu__toggle-icon"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
@@ -447,6 +474,16 @@ module.exports = window["wp"]["components"];
 
 /***/ }),
 
+/***/ "@wordpress/core-data":
+/*!**********************************!*\
+  !*** external ["wp","coreData"] ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["coreData"];
+
+/***/ }),
+
 /***/ "@wordpress/hooks":
 /*!*******************************!*\
   !*** external ["wp","hooks"] ***!
@@ -473,7 +510,7 @@ module.exports = window["wp"]["i18n"];
   \***************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"lfdb/mega-menu","version":"0.1.0","title":"Mega Menu LFDB","category":"lfdb-blocks","description":"Add a mega menu to your navigation.","parent":["core/navigation"],"example":{},"attributes":{"label":{"type":"string"},"description":{"type":"string"},"title":{"type":"string"},"menuSlug":{"type":"string"}},"supports":{"html":false,"interactivity":true,"renaming":false,"reusable":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}},"__experimentalSlashInserter":true},"textdomain":"lfdb","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js","viewStyle":"file:./index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"lfdb/mega-menu","version":"0.1.0","title":"Mega Menu LFDB","category":"lfdb-blocks","description":"Add a mega menu to your navigation.","parent":["core/navigation"],"example":{},"attributes":{"label":{"type":"string"},"description":{"type":"string"},"title":{"type":"string"},"menuSlug":{"type":"string"},"pageParentId":{"type":"number"}},"supports":{"html":false,"interactivity":true,"renaming":false,"reusable":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}},"__experimentalSlashInserter":true},"textdomain":"lfdb","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js","viewStyle":"file:./index.css"}');
 
 /***/ })
 

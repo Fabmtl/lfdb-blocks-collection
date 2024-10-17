@@ -22,6 +22,9 @@
     },
     "menuSlug": {
       "type": "string"
+    },
+    "pageParentId": {
+      "type": "number"
     }
   },
   "supports": {
