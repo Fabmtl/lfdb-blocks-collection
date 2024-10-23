@@ -21,6 +21,7 @@
 
 		toggleMenu() {
 			// Toggle the "hidden" class on the menu
+			this.toggleButton.classList.toggle("is-active");
 			this.menu.classList.toggle("is-active");
 		}
 
@@ -30,6 +31,7 @@
 				!this.menu.contains(event.target) &&
 				event.target !== this.toggleButton
 			) {
+				this.toggleButton.classList.remove("is-active");
 				this.menu.classList.remove("is-active");
 			}
 		}

@@ -18,6 +18,9 @@ $currentPageID          = get_queried_object_id();
 $currentPageParentID    = wp_get_post_parent_id( $currentPageID );
 // $collapsed_url       = esc_url( $attributes['collapsedUrl'] ?? '');
 
+// var_dump($parentPageId );
+// var_dump($currentPageID );
+// var_dump($currentPageParentID );
 // Don't display the mega menu link if there is no label or no menu slug.
 if ( ! $label || ! $menu_slug ) {
 	return null;	
