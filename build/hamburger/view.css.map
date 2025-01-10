@@ -1,0 +1,1 @@
+{"version":3,"file":"hamburger/view.css","mappings":";;;AAAA;EACI;IACI;EACN;AACF,C","sources":["webpack://lfdb-blocks-collection/./src/hamburger/view.scss"],"sourcesContent":["@media screen and (min-width: 768px) {\n    .wp-block-lfdb-lfdb-hamburger {\n        display: none;\n    }\n}"],"names":[],"sourceRoot":""}

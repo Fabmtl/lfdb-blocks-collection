@@ -32,8 +32,8 @@ function create_block_lfdb_blocks_collection_block_init() {
 }
 add_action( 'init', 'create_block_lfdb_blocks_collection_block_init' );
 
-add_action( "wp_enqueue_scripts", "lfdb_blocks_collections_swiper");
-add_action( 'enqueue_block_editor_assets', 'lfdb_blocks_collections_swiper' );
+// add_action( "wp_enqueue_scripts", "lfdb_blocks_collections_swiper");
+// add_action( 'enqueue_block_editor_assets', 'lfdb_blocks_collections_swiper' );
 function lfdb_blocks_collections_swiper() 
 {
 	wp_enqueue_style("swiper-blocks-stylesheet","https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");

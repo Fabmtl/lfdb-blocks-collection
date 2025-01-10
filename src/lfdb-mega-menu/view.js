@@ -7,6 +7,7 @@
 
 	class MenuToggle {
 		constructor(toggleButtonId, menuId) {
+			// return;
 			this.toggleButton = toggleButtonId;
 			this.menu = menuId;
 
@@ -14,8 +15,11 @@
 			this.toggleButton.addEventListener("click", () => this.toggleMenu());
 
 			// Close the menu when clicking outside
-			document.addEventListener("click", (event) =>
-				this.closeMenuOnClickOutside(event),
+			document.addEventListener("click", (event) => {
+				console.log(event.target);
+				this.closeMenuOnClickOutside(event)
+			}
+				
 			);
 		}
 
