@@ -28,7 +28,12 @@ import {
 	justifyRight,
 	stretchWide,
 	stretchFullWidth,
+<<<<<<< HEAD
 } from '@wordpress/icons';
+=======
+	symbolFilled
+} from "@wordpress/icons";
+>>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a
 
 /**
  * Internal dependencies
@@ -156,7 +161,20 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const widthOptions = [
 		{
+<<<<<<< HEAD
 			value: 'content',
+=======
+			value: "none",
+			icon: symbolFilled,
+			label: sprintf(
+				// translators: %s: container size (i.e. 600px etc)
+				__("Content width  fit content", "mega-menu-block"),
+				layout.contentSize,
+			),
+		},
+		{
+			value: "content",
+>>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a
 			icon: alignNone,
 			label: sprintf(
 				// translators: %s: container size (i.e. 600px etc)

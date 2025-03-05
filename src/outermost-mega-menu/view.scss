@@ -1,4 +1,7 @@
 // Front-end specific styles.
+.wp-block-outermost-mega-menu {
+    position: relative;
+}
 .wp-block-outermost-mega-menu__menu-container {
     height: auto;
     left: -1px;
@@ -10,6 +13,10 @@
     visibility: hidden;
     z-index: 2000;
 
+    &.menu-width-none {
+        max-width: var(--wp--style--global--content-size);
+        width: max-content;
+    }
     &.menu-width-content {
         max-width: var(--wp--style--global--content-size);
         width: var(--wp--style--global--content-size);
@@ -26,6 +33,7 @@
     }
 
     .menu-container__close-button {
+        display: none !important;
         align-items: center;
         -webkit-backdrop-filter: blur(16px) saturate(180%);
         backdrop-filter: blur(16px) saturate(180%);
@@ -75,6 +83,10 @@
     &.items-justified-center,
     &.items-justified-space-between {
         .wp-block-outermost-mega-menu__menu-container {
+            // &.menu-width-none {
+            //     left: 0;
+            //     transform: translateX(-50%);
+            // }
             &.menu-width-content {
                 left: calc( ( -1 * var(--wp--style--global--content-size) / 2 ) + 50% );
             }
@@ -101,7 +113,11 @@
 
         &.menu-justified-center {
             right: unset;
-
+            &.menu-width-none {
+                // left: calc( ( -1 * var(--wp--style--global--content-size) / 2 ) + 25% );
+                left: 0 !important;
+                transform: translateX(-25%);
+            }
             &.menu-width-content {
                 left: calc( ( -1 * var(--wp--style--global--content-size) / 2 ) + 50% );
             }

@@ -1,1 +1,20 @@
+<<<<<<< HEAD
 swiper-slide.wp-block-lfdb-slide-swiper{flex-shrink:0;height:700px;width:100vw}swiper-slide.wp-block-lfdb-slide-swiper.is-style-selected-slide{border:4px solid red!important}
+=======
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/slide/editor.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+swiper-slide.wp-block-lfdb-slide-swiper {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 700px;
+}
+swiper-slide.wp-block-lfdb-slide-swiper.is-style-selected-slide {
+  border: 4px red solid !important;
+}
+>>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a

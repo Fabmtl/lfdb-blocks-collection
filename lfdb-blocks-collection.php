@@ -22,7 +22,7 @@
  */
 function create_block_lfdb_blocks_collection_block_init() {
 	register_block_type( __DIR__ . '/build/hamburger' );
-	// register_block_type( __DIR__ . '/build/outermost-mega-menu' );
+	register_block_type( __DIR__ . '/build/outermost-mega-menu' );
 	register_block_type( __DIR__ . '/build/lfdb-section-mega-menu' );
 	register_block_type( __DIR__ . '/build/lfdb-menu-mobile' );
 	register_block_type( __DIR__ . '/build/lfdb-search' );
