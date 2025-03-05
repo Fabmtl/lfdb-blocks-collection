@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #lfdb-section-menu-mobile{box-sizing:border-box;max-height:0;opacity:0;overflow:hidden;pointer-events:none;transition:opacity .3s cubic-bezier(0,.28,.34,.98);visibility:hidden}#lfdb-section-menu-mobile.is-active{max-height:100%;opacity:1;overflow:auto;pointer-events:all;visibility:visible}
 =======
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
@@ -24,3 +25,6 @@
 
 /*# sourceMappingURL=style-index.css.map*/
 >>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a
+=======
+#lfdb-section-menu-mobile{box-sizing:border-box;max-height:0;opacity:0;overflow:hidden;pointer-events:none;transition:opacity .3s cubic-bezier(0,.28,.34,.98);visibility:hidden}#lfdb-section-menu-mobile.is-active{max-height:100%;opacity:1;overflow:auto;pointer-events:all;visibility:visible}
+>>>>>>> rescits

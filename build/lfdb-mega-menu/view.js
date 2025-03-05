@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 !function(){const t=document.querySelectorAll(".wp-block-lfdb-mega-menu__toggle");class e{constructor(t,e){this.toggleButton=t,this.menu=e,this.toggleButton.addEventListener("click",(()=>this.toggleMenu())),document.addEventListener("click",(t=>{console.log(t.target),this.closeMenuOnClickOutside(t)}))}toggleMenu(){this.menu.classList.toggle("is-active")}closeMenuOnClickOutside(t){this.menu.contains(t.target)||t.target===this.toggleButton||this.menu.classList.remove("is-active")}}t.forEach((t=>{const n=document.getElementById(t.getAttribute("data-lfdb-section-menu-target"));new e(t,n)}))}();
 =======
 var __webpack_exports__ = {};
@@ -41,3 +42,6 @@ var __webpack_exports__ = {};
 
 //# sourceMappingURL=view.js.map
 >>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a
+=======
+!function(){const t=document.querySelectorAll(".wp-block-lfdb-mega-menu__toggle");class e{constructor(t,e){this.toggleButton=t,this.menu=e,this.toggleButton.addEventListener("click",(()=>this.toggleMenu())),document.addEventListener("click",(t=>this.closeMenuOnClickOutside(t)))}toggleMenu(){this.toggleButton.classList.toggle("is-active"),this.menu.classList.toggle("is-active")}closeMenuOnClickOutside(t){this.menu.contains(t.target)||t.target===this.toggleButton||(this.toggleButton.classList.remove("is-active"),this.menu.classList.remove("is-active"))}}t.forEach((t=>{const s=document.getElementById(t.getAttribute("data-lfdb-section-menu-target"));new e(t,s)}))}();
+>>>>>>> rescits

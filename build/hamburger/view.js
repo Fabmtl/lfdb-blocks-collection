@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 (()=>{"use strict";!function(){const e=document.querySelector(".wp-block-lfdb-lfdb-hamburger"),s=document.getElementById("lfdb-section-menu-mobile"),i=document.body;e.addEventListener("click",(function(){if(e.classList.contains("is-active"))return e.classList.remove("is-active"),s.classList.remove("is-active"),void i.classList.remove("menu-mobile-is-active");e.classList.add("is-active"),s.classList.add("is-active"),i.classList.add("menu-mobile-is-active")}))}()})();
 =======
 /******/ (() => { // webpackBootstrap
@@ -89,3 +90,6 @@ __webpack_require__.r(__webpack_exports__);
 ;
 //# sourceMappingURL=view.js.map
 >>>>>>> 82096cc9ecff279cf5c3883ef42a509cf4619c6a
+=======
+(()=>{"use strict";!function(){const e=document.querySelector(".wp-block-lfdb-lfdb-hamburger"),s=document.getElementById("lfdb-section-menu-mobile"),i=document.body;e.addEventListener("click",(function(){if(e.classList.contains("is-active"))return e.classList.remove("is-active"),s.classList.remove("is-active"),void i.classList.remove("menu-mobile-is-active");e.classList.add("is-active"),s.classList.add("is-active"),i.classList.add("menu-mobile-is-active")}))}()})();
+>>>>>>> rescits

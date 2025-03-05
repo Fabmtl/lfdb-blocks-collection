@@ -15,7 +15,11 @@
 		"start": "wp-scripts start --webpack-copy-php --experimental-modules"
 	},
 	"devDependencies": {
+<<<<<<< HEAD
 		"@wordpress/scripts": "^30.11.0"
+=======
+		"@wordpress/scripts": "^30.12.0"
+>>>>>>> rescits
 	},
 	"dependencies": {
 		"@wordpress/icons": "^9.42.0",
