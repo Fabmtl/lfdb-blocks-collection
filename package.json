@@ -1,8 +1,8 @@
 {
 	"name": "lfdb-blocks-collection",
 	"version": "0.1.0",
-	"description": "Example static block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
+	"description": "COllection de blocks de La Fabrique de blogs.",
+	"author": "La Fabrique de blogs",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
@@ -15,7 +15,7 @@
 		"start": "wp-scripts start --webpack-copy-php --experimental-modules"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^27.2.0"
+		"@wordpress/scripts": "^30.11.0"
 	},
 	"dependencies": {
 		"@wordpress/icons": "^9.42.0",

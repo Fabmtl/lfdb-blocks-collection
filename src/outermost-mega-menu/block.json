@@ -4,7 +4,7 @@
 	"name": "outermost/mega-menu",
 	"version": "0.1.0",
 	"title": "Mega Menu",
-	"category": "lfdb-blocks",
+	"category": "design",
 	"description": "Add a mega menu to your navigation.",
 	"parent": [ "core/navigation" ],
 	"example": {},
